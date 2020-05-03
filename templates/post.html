@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>{{ variables.title }}</title>
+        {% for key, value in variables.meta.items() %}
+        <meta name="{{key}}" content="{{value}}" />
+        {% endfor %}
+    </head>
+    <body>
+        {{ variables.content }}
+    </body>
+</html>
