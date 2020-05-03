@@ -22,6 +22,16 @@ If Wordpress (or the GraphQL endpoint) is protected by a HTTP authentification, 
   - In `wp2pelicanconf.py` with `HTTP_AUTH = ("id", "password")`
   - Use environment variables `WP_PROXY_ID` and `WP_PROXY_PWD`: this allow to not write the password in a file and can be use with Gitlab CI.
   
+### Installation
+```
+git clone git@github.com:shan-x/wp2pelican.git
+cp wp2pelican
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pyhton3 wp2pelican.py
+```
+  
 ### Setup Pelican
 The output of the script will be in $PELICAN_PATH, where the file `pelicaconf.py` should be located. At the end of this file you have to add:
 ```
